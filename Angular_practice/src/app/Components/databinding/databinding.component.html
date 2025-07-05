@@ -1,0 +1,17 @@
+<p>databinding works!</p>
+<h1>oneway ts to html</h1>
+<h2>Interpolation</h2>
+<input type='{{inputType}}'>
+<h3>property binding</h3>
+<input type="text" [value]="name">
+<h1>oneway html to ts </h1>
+<p>{{courseName}}</p>
+<h4>Event binding</h4>
+<button (click)="showAlert('hi guys!')" >show alert</button>
+<h1>Two way databinding (ngmodel)</h1>
+<input type="text" [(ngModel)]="courseName" [value]="courseName">
+<input type="text" [(ngModel)]="designation" value="designation">
+<p>{{designation}}</p>
+<button (click)="setDesignation()">you</button>
+<p>{{firstName()}}</p>
+<button (click)="changeCoursename()"></button>

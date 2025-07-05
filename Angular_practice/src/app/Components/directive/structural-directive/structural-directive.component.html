@@ -1,0 +1,46 @@
+<p>structural-directive works!</p>
+<div class="row pt-3">
+    <div class="col-3">
+        <div *ngIf="isDiv1Visible" class="bg-danger p-3 text-center">
+            <h4>Div-1</h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="isDiv2Visible" class="bg-danger p-3 text-center">
+            <h4>Div-2</h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="isDiv3visible" class="bg-warning p-3 text-center">
+            <h4>Div-3</h4>
+        </div>
+    </div>
+     <div class="col-3">
+        <div *ngIf="selectedState=='USA'" class="bg-secondary p-3 text-center">
+            <h4>Div-4</h4>
+        </div>
+    </div>
+</div>
+<div class="row pt-3">
+    <div class="col-3 text-center">
+        <button class="btn btn-primary mx-2" (click)="showDiv1()">Show</button>
+        <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
+    </div>
+    <div class="col-3 text-center">
+        <button class="btn btn-success mx-2" (click)="toggleDiv2()">Toggle</button>
+    </div>
+    <div class="col-3 text-center">
+        <input type="text" placeholder="Num1" [(ngModel)]="num1">
+        <input type="text" placeholder="Num2" [(ngModel)]="num2">
+        <button class="btn btn-primary mx-2" (click)="compareNumbers()">Compare</button>
+    </div>
+    <div class="col-3 text-center">
+        <input type="checkbox" [(ngModel)]="isActive">
+        <select [(ngModel)]="selectedState">
+            <option value="">Select One</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="SriLanka">SriLanka</option>
+        </select>
+    </div>
+</div>
